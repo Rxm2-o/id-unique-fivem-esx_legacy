@@ -1,0 +1,1 @@
+ALTER TABLE users ADD COLUMN unique_id VARCHAR(50) NULL;
