@@ -39,7 +39,7 @@ AddEventHandler('esx:playerLoaded', function(playerId, xPlayer)
     )
 end)
 
--- ✅ Ajout de l’ID unique 
+-- Ajout de l’ID unique 
 ESX.RegisterServerCallback('uniqueid:getPlayerUniqueId', function(source, cb)
     local xPlayer = ESX.GetPlayerFromId(source)
     exports.oxmysql:scalar(
@@ -50,4 +50,5 @@ ESX.RegisterServerCallback('uniqueid:getPlayerUniqueId', function(source, cb)
         end
     )
 end)
+
 
