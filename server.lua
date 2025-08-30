@@ -29,7 +29,7 @@ AddEventHandler('esx:playerLoaded', function(playerId, xPlayer)
             else
                 print(("[UniqueID] %s possède déjà l’ID unique : %s"):format(xPlayer.identifier, uniqueId))
 
-                -- Notification + message dans le chat
+                
                 xPlayer.showNotification("🎫 Votre ID unique est : ~y~" .. uniqueId)
                 TriggerClientEvent('chat:addMessage', playerId, {
                     args = { '^2[ID UNIQUE]', 'Votre identifiant unique est : ^3' .. uniqueId }
@@ -39,7 +39,7 @@ AddEventHandler('esx:playerLoaded', function(playerId, xPlayer)
     )
 end)
 
--- ✅ Ajout de l’ID unique dans le scoreboard ESX
+-- ✅ Ajout de l’ID unique 
 ESX.RegisterServerCallback('uniqueid:getPlayerUniqueId', function(source, cb)
     local xPlayer = ESX.GetPlayerFromId(source)
     exports.oxmysql:scalar(
@@ -50,3 +50,4 @@ ESX.RegisterServerCallback('uniqueid:getPlayerUniqueId', function(source, cb)
         end
     )
 end)
+
